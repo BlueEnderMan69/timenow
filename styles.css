@@ -7,10 +7,24 @@ body {
   text-align: center;
 }
 
-#locationDisplay, #timeDisplay {
+#locationDisplay {
   font-size: 20px;
   margin: 20px 0;
   color: #333;
+  font-weight: bold;
+}
+
+#timeDisplay {
+  font-size: 20px;
+  margin: 20px 0;
+  color: #555;
+  font-style: italic;
+  background: linear-gradient(145deg, #e0e0e0, #b0b0b0);
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
 .twitter-btn {
@@ -32,16 +46,4 @@ body {
   background-color: #0d8de7;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transform: scale(1.05);
-}
-
-#locationDisplay {
-  font-weight: bold;
-}
-
-#timeDisplay {
-  font-style: italic;
-  color: #555;
-  background: linear-gradient(145deg, #e0e0e0, #b0b0b0);
-  border-radius: 10px;
-  padding: 10px;
 }
