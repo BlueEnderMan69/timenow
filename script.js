@@ -1,6 +1,7 @@
-// Function to fetch the user's IP address and location info using a public API
+// Function to fetch the user's IP address and location info using a public IP API
 async function fetchIPDetails() {
     try {
+        // Fetch user details based on IP
         const response = await fetch('https://ipapi.co/json/');
         const data = await response.json();
 
