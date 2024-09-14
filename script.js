@@ -7,6 +7,18 @@ async function fetchIPDetails() {
 
         const { city, region, country, timezone } = data;
 
+
+        <script>
+  document.getElementById('twitter-share').addEventListener('click', function() {
+    const text = "Check out this cool content!";
+    const url = "https://example.com"; // The URL you want to share
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+    
+    window.open(twitterUrl, '_blank');
+  });
+</script>
+
+
         // Display the location
         document.getElementById('locationDisplay').textContent = `Location: ${city}, ${region}, ${country}`;
 
