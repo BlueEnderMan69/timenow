@@ -1,55 +1,17 @@
-/* Basic styling for the page */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+/* styles.css */
+.twitter-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #1DA1F2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.container {
-    text-align: center;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.twitter-btn:hover {
+  background-color: #0d8de7;
 }
-
-h1 {
-    font-size: 2.5rem;
-    color: #333;
-}
-
-#timeDisplay {
-    font-size: 2rem;
-    color: #555;
-}
-
-#locationDisplay {
-    font-size: 1.2rem;
-    color: #777;
-}
-
-
-<style>
-  .twitter-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #1DA1F2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  .twitter-btn:hover {
-    background-color: #0d8de7;
-  }
-</style>
-
