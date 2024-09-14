@@ -41,4 +41,7 @@ body {
 #timeDisplay {
   font-style: italic;
   color: #555;
+  background: linear-gradient(145deg, #e0e0e0, #b0b0b0);
+  border-radius: 10px;
+  padding: 10px;
 }
