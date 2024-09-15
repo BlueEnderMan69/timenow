@@ -1,3 +1,5 @@
+let tempTimeOverride = null;
+
 // Function to fetch the user's IP address and location info using a public IP API
 async function fetchIPDetails() {
     try {
@@ -6,18 +8,6 @@ async function fetchIPDetails() {
         const data = await response.json();
 
         const { city, region, country, timezone } = data;
-
-
-        <script>
-  document.getElementById('twitter-share').addEventListener('click', function() {
-    const text = "Check out this cool content!";
-    const url = "https://example.com"; // The URL you want to share
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-    
-    window.open(twitterUrl, '_blank');
-  });
-</script>
-
 
         // Display the location
         document.getElementById('locationDisplay').textContent = `Location: ${city}, ${region}, ${country}`;
@@ -36,7 +26,12 @@ function displayTime(timezone) {
     
     // Function to update time every second
     function updateTime() {
-        const now = new Date().toLocaleString("en-US", { timeZone: timezone });
+        let now;
+        if (tempTimeOverride === 69) {
+            now = "69:69:69";
+        } else {
+            now = new Date().toLocaleString("en-US", { timeZone: timezone });
+        }
         timeDisplay.textContent = now;
     }
     
@@ -47,3 +42,24 @@ function displayTime(timezone) {
 
 // Fetch the user's IP and display the time
 fetchIPDetails();
+
+// Expose a function to set the temporary time override
+window.setTempTime = function(time) {
+    if (time === 69) {
+        tempTimeOverride = 69;
+    } else {
+        tempTimeOverride = null;
+    }
+}
+
+// Function to handle Twitter sharing
+function handleTwitterShare() {
+    const text = "Check out this cool content!";
+    const url = "https://example.com"; // The URL you want to share
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+    
+    window.open(twitterUrl, '_blank');
+}
+
+// Attach event listener to the Twitter share button
+document.getElementById('twitter-share').addEventListener('click', handleTwitterShare);
